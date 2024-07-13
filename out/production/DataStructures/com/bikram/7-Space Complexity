@@ -1,0 +1,23 @@
+public class Main {
+    public void greet(String[] names) {
+    // O(n) space
+    String[] copy = new String[names.length];
+
+    for (int i = 0; i < names.length; i++)
+        system.out.println("Hi " + names[i]);
+    }
+}
+
+Explanation of Space Complexity:-
+Most of the time, we have to do a trade off between saving time and saving space. There are times when we
+have more space, so we can use that to optimize an algorithm to make it faster and more scalable.
+But there are also times where you limited space, like when we build and app for a small mobile device.
+In those situations we have to optimize for the space, coz scalability is not a big factor. Only one
+user is going to use our  application at that movement, not a million users.
+
+So, we need a way to talk abut how much space and algorithm requires, and that's where we use the big O
+notation again.
+
+we only look at the additional space that we should allocate relative to the size of the input. We always have
+the input of size n, so we don't count it, we just analyze how much extra space we need to allocate for this
+algorithm.

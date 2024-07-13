@@ -1,0 +1,20 @@
+
+public class Main {
+    public static void main(int[] numbers) {
+        //O(1)
+        System.out.println(numbers[0]);
+        System.out.println(numbers[0]);
+    }
+}
+
+Explanation of O(1) Or Constant Time:-
+The above method takes an array of integers and prints the first item on the console.
+It doesn't matter how big the array is. We can have an array with one or one million items.
+All we are doing here is printing the first item. So this method has a single operation,
+and takes a constant amount of time to run. we don't worry about the exact execution time in milliseconds,
+because that can be different from one machine to another or even on the same machine.
+
+All we care about is that this method runs in constant time, and we represent it using the big O of 1.
+This is the runtime complexity of this method.
+
+O(1) ---->Meaning --->Constant time

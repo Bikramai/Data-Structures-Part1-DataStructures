@@ -1,0 +1,31 @@
+Another growth rate we're going to talk about is the logarithmic growth which we're going to show with big O(log n)
+
+Big O(log n) :-
+Linear grows at the same rate, but the logarithmic or O(log n) slows down at some point. So an Algorithm that runs
+in logarithmic time is more efficient and more scalable that an algorithm that runs in Linear or Quadratic time.
+
+Linear Search:-
+For Example-let say, we have an array of sorted numbers from 1 to 10 and  you want to find the number 10.
+One way to find the 10 is to iterate over this array using a for loop, going until we find a 10.
+This is called the linear search because it runs in linear time.
+
+In the worst case scenario, if the number we're looking for is at the end of an array we have to inspect
+every cell in this array to find a target number. The more items we have, the longer this operation is going
+to take so the run time of this algorithm increases linearly and direct proportion with the size of our array.
+
+Now, we have another searching out for them called binary search, and this algorithm runs in logarithmic time.
+It's much faster then the linear search. Assuming that our array is sorted, we start off by looking at the
+middle item. If this item smaller or greater than the value we're looking for? It's smaller, so our target number,
+in this case 10, must be in the right  partition of this array? Right? So we don't need to inspect any of the
+items in the left partition and with this we can narrow down our search by half. Now, in the right partition,
+again, we look at the middle item, is it smaller or greater than the target value? It's smaller, so again
+ignore the items on the left, and focus on the items on the right.
+
+S in every step, we're essentially narrowing down our search by half. With this algorithm
+if we have one million items in the array, we can find a target item with a maximum of 19 comparisons.
+            1M items / 19 comparison
+We don't only have to inspect every item in our array, this is logarithmic time in action,
+we have logarithm growth in algorithmic growth in algorithms where we reduce our work by half in every step.
+
+Note:-
+An algorithm with logarithmic time, is more scalable then one with linear Time.

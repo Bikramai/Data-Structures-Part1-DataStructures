@@ -1,0 +1,56 @@
+1. With Nested Loop:
+public class Main {
+    public void log(int[] numbers) {
+        for (int first : numbers) //O(n)
+            for (int second : numbers) //O(n)
+                System.out.println(first + ", " + second + ", ");
+    }
+}
+Explanation of O(n^2) Or Quadratic Time:-
+Nested Loops - This is the algorithm that we use printing  all combinations of items in array.
+
+So we need to use the runtime complexity here?
+In our outer loop, we're iterating over our input array, so here we have O(n).
+Now, once again we're iterating over all the items in this array, another example of O(n).
+
+So the runtime complexity of this method is O(n * n), or n square.
+We say this algorithm runs in quadratic time. Algorithms that run the O(n^2), is slower than algorithms that run in
+O(n).
+
+Now of course, this depends on the size of the input. If we're dealing with an array of let's say 50 items,
+we're not going to see any differences but as our input grows larger and larger, algorithms that run in O(n^2)
+get slower and slower.
+
+2. Loop before or after loop
+public class Main {
+    public void log(int[] numbers) {
+        // O(n + n ^2) => O(n^2)
+        for (int number : numbers) //O(n)
+            System.out.println(number);
+
+        for (int first : numbers) //O(n)
+            for (int second : numbers) //O(n)
+                for (int third : numbers)
+                    System.out.println(first + ", " + second + ", ");
+    }
+}
+Now, What if you had another loop before or after this loop.
+What is the runtime complexity of this method?
+Well, here we have O(n), so the runtime complexity of this method is going to be O(n + n ^2).
+The O of this number is always greater than the number itself, right? So in this expression n squared always grows
+faster then n, again, use the big-O notation, to understand how much the cost of an algorithm increases, all we
+need is an approximation, not an exact value, so here we can drop n, and conclude that this method runs in O(n^2).
+
+3. Nested inside O(n^3)
+public class Main {
+    public void log(int[] numbers) {
+        // O(n^3)
+        for (int first : numbers) //O(n)
+            for (int second : numbers) //O(n)
+                for (int third : numbers) //O(n)
+                    System.out.println(first + ", " + second + ", ");
+    }
+}
+What if instead of this loop, we had another nested third loop here O(n^3)?
+The runtime complexity is now O(n^3). As you can imagine, this algorithm gets far slower than an algorithm
+with O(n^2).
